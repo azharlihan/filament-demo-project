@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Resources\PatientResource\RelationManagers;
 use App\Filament\Resources\PatientResource\Pages;
 use App\Models\Patient;
 use Filament\Forms;
@@ -93,6 +94,7 @@ class PatientResource extends Resource
     public static function getRelations(): array
     {
         return [
+            RelationManagers\TreatmentsRelationManager::class,
         ];
     }
 
